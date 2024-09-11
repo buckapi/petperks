@@ -660,7 +660,7 @@ progress {
 
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 90%;
+    max-width: 95%;
   } }
 
 .row {
@@ -16365,7 +16365,8 @@ label input {
 .dz-banner {
   position: relative; }
   .dz-banner .banner-swiper {
-    margin: 0 -15px;
+    /* margin: 0 -15px; */
+    margin: 0 0px;
     background: linear-gradient(135deg, #58a4a6, #163d3a) !important; border-radius: 15px; }
     .dz-banner .banner-swiper .swiper-wrapper .swiper-slide {
       opacity: 0 !important; }
