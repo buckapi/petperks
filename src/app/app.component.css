@@ -11,3 +11,9 @@
             justify-content: space-between;
     gap: 15px;
   }
+  .responsive-image {
+    width: 100%;          /* Ajusta el ancho al 100% del contenedor */
+    height: 200px;        /* Altura fija o adaptable según tu diseño */
+    object-fit: cover;    /* La imagen se recorta para llenar el espacio sin deformarse */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+}

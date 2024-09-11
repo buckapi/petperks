@@ -1,24 +1,15 @@
 <div class="dz-category style-2 border-bottom">
     <div class="title-bar mb-2">
-        <h4 class="title">Our pet care services</h4>
-        <a href="category.html">See All</a>
+        <h4 class="title">Servicios dentro de la categoría {{config.getSelectedCategoryLabel()}}</h4>
+        <!-- <a href="category.html">Ver todos</a> -->
     </div>
     <div class="swiper dz-category-swiper3 mb-3">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">	
-                <a href="category.html" class="category-tag tag-lg active">Pet Grooming</a>
-            </div>
-            <div class="swiper-slide">
-                <a href="category.html" class="category-tag tag-lg">Walking and sitting</a>
-            </div>
-            <div class="swiper-slide">	
-                <a href="category.html" class="category-tag tag-lg">Dog Training</a>
-            </div>
-            <div class="swiper-slide">	
-                <a href="category.html" class="category-tag tag-lg">Dog Boarding Kennels</a>
-            </div>
-            <div class="swiper-slide">	
-                <a href="category.html" class="category-tag tag-lg">Dog Emergency Services</a>
+            <div class="swiper-slide" *ngFor="let item of config.getServicesByCategory(config.categorySelected)">
+                <a class="category-tag tag-lg" style="cursor: pointer;" (click)="showServiceAlert(item.name)"
+                    [ngClass]="{'active': item.name === selectedService}">
+                    {{ item.name }}
+                </a>
             </div>
         </div>
     </div>

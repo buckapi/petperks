@@ -4,31 +4,49 @@ import { ScriptLoaderService } from './services/script-loader.service';
 import { CommonModule } from '@angular/common';
 import { LoadStyleService } from './services/load-style.service';
 import { ServicesComponent } from './components/services/services.component';
-
+import { ConfigService } from '@app/services/config.service';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { RealtimeSpecialistsService } from './services/realtime-specialists.service';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,
     ServicesComponent,
-    CommonModule
+    CommonModule,
+    CategoriesComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  
+  // categories: [string, string][] = [];  // Almacena las categorías como tuplas
+  specialists: any[] = [];
   title = 'pets';
   menuState: string = 'close'; // Valor inicial del menú
+  get categories() {
+    return Object.entries(this.configService.defaultConfig.categories);
+  }
   constructor( 
-  public scriptLoader: ScriptLoaderService,
-  private loadStyleService: LoadStyleService
+    private realtimeSpecialistsService: RealtimeSpecialistsService,
+
+    public scriptLoader: ScriptLoaderService,
+  private loadStyleService: LoadStyleService,
+  public configService: ConfigService
   // public auth:PocketAuthService,
   // public pocketbase: PocketbaseService,
   // public global: GlobalService
 ) {
- 
 }
+selectCategory(categoryKey: keyof typeof this.configService.defaultConfig.categories) {
+  this.configService.categorySelected = categoryKey;
+  console.log('Categoría seleccionada:', this.configService.categorySelected);
+}
+
 ngOnInit(): void {
+  this.realtimeSpecialistsService.specialists$.subscribe((data) => {
+    this.specialists = data;
+
+  });
   // Cargar estilos de forma dinámica
 
 this.themeTwo()

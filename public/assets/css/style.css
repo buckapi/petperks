@@ -660,7 +660,8 @@ progress {
 
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1024px; } }
+    max-width: 90%;
+  } }
 
 .row {
   --bs-gutter-x: 30px;
@@ -16365,7 +16366,7 @@ label input {
   position: relative; }
   .dz-banner .banner-swiper {
     margin: 0 -15px;
-    background-color: var(--banner-bg); }
+    background: linear-gradient(135deg, #58a4a6, #163d3a) !important; border-radius: 15px; }
     .dz-banner .banner-swiper .swiper-wrapper .swiper-slide {
       opacity: 0 !important; }
       .dz-banner .banner-swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
