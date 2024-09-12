@@ -46,3 +46,9 @@
 
     color: #438e99;
 }
+/* Mostrar solo en pantallas de escritorio */
+@media (max-width: 992px) {
+    .desktop-only {
+        display: none;
+    }
+}
