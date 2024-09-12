@@ -16497,7 +16497,7 @@ label input {
 
 .dz-category.style-2 {
   margin: 0 -15px;
-  padding: 20px 15px 30px;
+  padding: 0px 15px 0px;
   overflow: hidden; }
   .dz-category.style-2 .category-bx .dz-media {
     max-width: 105px; }
@@ -16561,7 +16561,7 @@ label input {
     margin-bottom: 0; }
 
 .dz-box {
-  padding: 25px 15px 25px;
+  padding: 25px 15px 0px;
   margin: 0 -15px;
   border-bottom: 1px solid var(--border-color); }
   .dz-box.style-2 {
