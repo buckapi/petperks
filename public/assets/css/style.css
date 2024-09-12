@@ -8510,7 +8510,7 @@ textarea.form-control-lg {
 /*==== 4. Global/Base ====*/
 * {
   outline: none;
-  padding: 0; }
+  padding: 3px; }
   *::after {
     margin: 0;
     padding: 0; }
@@ -13541,7 +13541,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: var(--title);
   transition: all 0.3s ease-in-out;
   background: var(--bg-white);
-  border-radius: var(--border-radius-sm); }
+  /* border-radius: var(--border-radius-sm); } */
+  border-radius: 25px; }
   .form-control .select {
     padding: 12px 0; }
   .form-control.form-control-lg {

@@ -36,3 +36,13 @@
  .form-control {
     width: 100%; /* Hace que los campos de entrada ocupen todo el ancho disponible */
 }
+.title{
+    font-size: 65px;
+    color: #438e99;
+    font-weight:bolder !important;
+}
+.sub{
+    font-size: 45px;
+
+    color: #438e99;
+}
