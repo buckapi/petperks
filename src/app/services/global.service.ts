@@ -23,7 +23,7 @@ export class GlobalService {
     images: [], // Inicializa con un array vacío
     services: []
   };
-  activeRoute="home";
+  activeRoute="login";
   constructor() { }
   setRoute(route:string){
     this.activeRoute=route;

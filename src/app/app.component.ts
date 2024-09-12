@@ -14,6 +14,9 @@ import { HomeComponent } from './components/home/home.component';
 import { GlobalService } from './services/global.service';
 import { ClinicdetailComponent } from './components/clinicdetail/clinicdetail.component';
 import { AddpetComponent } from './components/addpet/addpet.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { BackheaderComponent } from './components/ui/backheader/backheader.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -26,7 +29,10 @@ import { AddpetComponent } from './components/addpet/addpet.component';
     SidebarComponent,
     HomeComponent,
     CategoriesComponent,
-    ClinicdetailComponent,AddpetComponent
+    ClinicdetailComponent,AddpetComponent,
+    RegisterComponent,
+    LoginComponent,
+    BackheaderComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
