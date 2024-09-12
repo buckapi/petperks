@@ -8510,7 +8510,8 @@ textarea.form-control-lg {
 /*==== 4. Global/Base ====*/
 * {
   outline: none;
-  padding: 3px; }
+  /* padding: 3px; */
+ }
   *::after {
     margin: 0;
     padding: 0; }
