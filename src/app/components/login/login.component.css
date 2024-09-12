@@ -2,17 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Esto asegura que el contenedor tome la altura completa de la pantalla */
+    height: 100vh; /* Asegura que el contenedor tome la altura completa de la pantalla */
 }
 
 .dz-content-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center; /* Esto centra verticalmente las columnas */
-    max-width: 1200px; /* Ajusta esto según el ancho deseado */
+    justify-content: center; /* Centra horizontalmente las columnas */
+    align-items: center; /* Centra verticalmente las columnas */
+    max-width: 1200px;
     width: 100%;
-    padding: 20px; /* Añade un poco de padding para un espacio extra */
+    padding: 20px;
 }
 
 /* Ajuste para dispositivos móviles */
@@ -20,6 +20,7 @@
     .dz-content-wrapper {
         flex-direction: column;
         align-items: center; /* Centra el contenido en pantallas pequeñas */
+        justify-content: center; /* Centra horizontalmente en móviles */
         padding: 10px;
     }
 
@@ -33,22 +34,42 @@
         margin-bottom: 20px;
     }
 }
- .form-control {
+
+.form-control {
     width: 100%; /* Hace que los campos de entrada ocupen todo el ancho disponible */
 }
-.title{
-    font-size: 65px;
-    color: #438e99;
-    font-weight:bolder !important;
-}
-.sub{
-    font-size: 45px;
 
-    color: #438e99;
+.title {
+    font-size: 65px;
+    color: #3ba5a8;
+    font-weight: bolder !important;
 }
+
+.sub {
+    font-size: 45px;
+    font-weight: bolder !important;
+    color: #3ba5a8;
+}
+
 /* Mostrar solo en pantallas de escritorio */
 @media (max-width: 992px) {
     .desktop-only {
         display: none;
     }
+}
+/* Centrar el texto dentro del input */
+.form-control {
+    text-align: center; /* Esto centra el texto y el placeholder */
+    background-color: #3ba5a8;
+}
+
+/* Estilos para el placeholder */
+.form-control::placeholder {
+    text-align: center; /* Esto centra el texto del placeholder */
+    color: #fff; /* Cambia el color del placeholder si lo deseas */
+}
+.btn-login{
+    background-color: #cfe9e9;
+    color: #3ba5a8;
+    font-size: 25px !important;
 }
