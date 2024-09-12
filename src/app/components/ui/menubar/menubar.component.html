@@ -1,0 +1,21 @@
+<div class="menubar-area footer-fixed">
+    <div class="toolbar-inner menubar-nav">
+        <a (click)="global.setRoute('home')" [class.active]="global.activeRoute === 'home'" class="nav-link">
+            <i class="fi fi-rr-home"></i>
+          </a>
+        <a  class="nav-link">
+            <i class="fi fi-rr-heart"></i>
+        </a>
+        <a  class="nav-link">
+            <i class="fi fi-rr-shopping-cart">
+                <span class="cart-badge">14</span>
+            </i>
+        </a>
+        <a  class="nav-link">
+            <i class="fi  fi-rr-document-signed"></i>
+        </a>
+        <a (click)="global.setRoute('account')" [class.active]="global.activeRoute === 'account'"  class="nav-link" >
+            <i class="fi fi-rr-user"></i>
+        </a>
+    </div>
+</div>

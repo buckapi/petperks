@@ -1,0 +1,98 @@
+<!-- Main Content Start -->
+<main class="page-content space-top p-b60">
+    <div class="container pt-20">
+        <!-- Banner Start -->
+        <div class="dz-banner">
+            <div class="swiper banner-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="inner-banner">
+                            <div class="left-content">
+                                <h4 class="title" data-swiper-parallax="-300">We Give Preference To Your Pets</h4>
+                                <p data-swiper-parallax="-100">No code need. Plus free shipping on <span class="text-success">$99+</span> orders!</p>
+                                <a href="javascript:void(0);" class="btn btn-thin btn-sm btn-primary">Adopt A Pet</a>
+                            </div>
+                            <div class="right-content">
+                                <div class="dz-media">
+                                    <img src="assets/images/banner/pic1.png" alt="">
+                                </div>
+                            </div>
+                        </div>	
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="inner-banner">
+                            <div class="left-content">
+                                <h4 class="title" data-swiper-parallax="-300">We Give Preference To Your Pets</h4>
+                                <p data-swiper-parallax="-100">No code need. Plus free shipping on <span class="text-success">$99+</span> orders!</p>
+                                <a href="javascript:void(0);" class="btn btn-thin btn-sm btn-primary">Adopt A Pet</a>
+                            </div>
+                            <div class="right-content">
+                                <div class="dz-media">
+                                    <img src="assets/images/banner/pic1.png" alt="">
+                                </div>
+                            </div>
+                        </div>	
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="inner-banner">
+                            <div class="left-content">
+                                <h4 class="title" data-swiper-parallax="-300">We Give Preference To Your Pets</h4>
+                                <p data-swiper-parallax="-100">No code need. Plus free shipping on <span class="text-success">$99+</span> orders!</p>
+                                <a href="javascript:void(0);" class="btn btn-thin btn-sm btn-primary">Adopt A Pet</a>
+                            </div>
+                            <div class="right-content">
+                                <div class="dz-media">
+                                    <img src="assets/images/banner/pic1.png" alt="">
+                                </div>
+                            </div>
+                        </div>	
+                    </div>
+                </div>
+            </div>	
+        </div>
+        <!-- Banner End -->
+
+        <!-- Category End -->
+        <app-categories [hidden]="configService.showServices"></app-categories>
+        <!-- Category2 Start -->
+    <app-services [hidden]="configService.showServices"></app-services>
+
+
+        <div class="dz-box style-2">
+            <div class="title-bar">
+                <h5 class="title mb-0">Clínicas recomendadas</h5>
+                <a >Ver todas</a>
+            </div>
+            <div class="row ">
+                    <div class="col-6 col-lg-2 m-b35" *ngFor="let specialist of global.specialists" (click)="global.viewClinic(specialist)" >
+                        <div class="dz-card style-2">
+                            <div class="dz-media">
+                                <a >
+                                    <img src="{{specialist.images[0]}}" alt="image" class="responsive-image">
+                                </a>
+                                
+                            </div>
+                            <div class="dz-content">
+                                <h6 class="title"><a >Dog Body Belt</a></h6>
+                                <ul class="dz-meta">
+                                    <li class="dz-price">$80<del>$95</del></li>
+                                    <li class="dz-status"><span>Free delivery</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            </div>
+            
+        </div>
+
+    
+        <!-- Beat Deals -->
+
+    
+
+        
+    </div>
+</main>
+<!-- Main Content End -->

@@ -16,82 +16,70 @@ export class ConfigService {
 
     // Mapa de categorías con claves conocidas
     categories: {
-      salud_general: 'Salud',
-      urgencias: 'Urgencias',
-      cirugias: 'Cirugías',
-      rehabilitacion: 'Rehabilitación',
-      odontologia: 'Odontología',
-      dermatologia: 'Dermatología',
-      nutricion: 'Nutrición',
-      comportamiento_animal: 'Conducta',
-      especialidades_medicas: 'Especialidades',
-      estetica: 'Estética',
-      prevencion_salud: 'Prevención',
-      hospedaje_guarderia: 'Hospedaje',
-      otros_servicios: 'Otros'
+      salud_general: 'Consultas Generales',
+      urgencias: 'Urgencias Veterinarias',
+      cirugias: 'Cirugía Veterinaria',
+      presupuesto: 'Agenda Presupuesto',
+      especialidades_veterinaria: 'Especialidades Veterinarias',
+      hospitalizacion: 'Hospitalización',
+      diagnostico_imagen: 'Diagnóstico por Imagen',
+      laboratorio_clinico: 'Laboratorio Clínico',
+      rehabilitacion: 'Terapia Física y Rehabilitación',
+      hotel_guarderia: 'Hotel y Guardería',
+      estetica: 'Peluquería y Estética',
+      asistencia_final_vida: 'Servicios y Asistencia en la Etapa Final de la Vida'
     },
-
     // Mapa de servicios con claves conocidas
-    services: {
-      consulta_general: { name: 'Consulta', categoryKey: 'salud_general' },
-      examenes_laboratorio: { name: 'Laboratorio', categoryKey: 'salud_general' },
-      vacunacion: { name: 'Vacunación', categoryKey: 'salud_general' },
-      desparasitacion: { name: 'Desparasitación', categoryKey: 'salud_general' },
-      diagnostico_imagenes: { name: 'Imágenes', categoryKey: 'salud_general' },
-      control_peso: { name: 'Control Peso', categoryKey: 'salud_general' },
+   
+services: {
+  // Consultas Generales
+  medicina_preventiva: { name: 'Medicina Preventiva', categoryKey: 'salud_general' },
+  vacunacion: { name: 'Vacunación', categoryKey: 'salud_general' },
+  desparasitacion: { name: 'Desparasitación', categoryKey: 'salud_general' },
 
-      atencion_emergencia: { name: 'Emergencia', categoryKey: 'urgencias' },
-      cirugia_emergencia: { name: 'Cirugía Emergencia', categoryKey: 'urgencias' },
-      hospitalizacion: { name: 'Hospitalización', categoryKey: 'urgencias' },
+  // Urgencias Veterinarias
+  atencion_emergencia: { name: 'Emergencia', categoryKey: 'urgencias' },
 
-      esterilizacion: { name: 'Esterilización', categoryKey: 'cirugias' },
-      cirugia_ortopedica: { name: 'Ortopedia', categoryKey: 'cirugias' },
-      cirugia_dental: { name: 'Dental', categoryKey: 'cirugias' },
-      tejidos_blandos: { name: 'Tejidos Blandos', categoryKey: 'cirugias' },
+  // Cirugía Veterinaria
+  cirugia_veterinaria: { name: 'Cirugía Veterinaria', categoryKey: 'cirugias' },
 
-      fisioterapia: { name: 'Fisioterapia', categoryKey: 'rehabilitacion' },
-      rehabilitacion_postoperatoria: { name: 'Post-Operatoria', categoryKey: 'rehabilitacion' },
-      hidroterapia: { name: 'Hidroterapia', categoryKey: 'rehabilitacion' },
-      terapia_laser: { name: 'Terapia Láser', categoryKey: 'rehabilitacion' },
+  // Agenda Presupuesto
+  tipo_procedimientos: { name: 'Tipo de Procedimientos', categoryKey: 'presupuesto' },
 
-      limpieza_dental: { name: 'Limpieza', categoryKey: 'odontologia' },
-      extraccion_dental: { name: 'Extracción', categoryKey: 'odontologia' },
-      tratamiento_periodontal: { name: 'Periodontal', categoryKey: 'odontologia' },
+  // Especialidades Veterinarias
+  endocrinologia: { name: 'Endocrinología', categoryKey: 'especialidades_veterinaria' },
+  oftalmologia: { name: 'Oftalmología', categoryKey: 'especialidades_veterinaria' },
+  cardiologia: { name: 'Cardiología', categoryKey: 'especialidades_veterinaria' },
+  neurologia: { name: 'Neurología', categoryKey: 'especialidades_veterinaria' },
+  nefrologia: { name: 'Nefrología', categoryKey: 'especialidades_veterinaria' },
+  odontologia: { name: 'Odontología', categoryKey: 'especialidades_veterinaria' },
+  nutricionista: { name: 'Nutricionista', categoryKey: 'especialidades_veterinaria' },
+  etologia: { name: 'Etología', categoryKey: 'especialidades_veterinaria' },
+  oncologia: { name: 'Oncología', categoryKey: 'especialidades_veterinaria' },
 
-      tratamiento_alergias: { name: 'Alergias', categoryKey: 'dermatologia' },
-      tratamiento_infecciones: { name: 'Infecciones Piel', categoryKey: 'dermatologia' },
-      tratamiento_ectoparasitos: { name: 'Ectoparásitos', categoryKey: 'dermatologia' },
+  // Hospitalización
+  hospitalizacion: { name: 'Hospitalización', categoryKey: 'hospitalizacion' },
 
-      planes_alimentacion: { name: 'Planes Alimentación', categoryKey: 'nutricion' },
-      suplementacion: { name: 'Suplementos', categoryKey: 'nutricion' },
+  // Diagnóstico por Imagen
+  radiologia: { name: 'Radiología', categoryKey: 'diagnostico_imagen' },
+  ecografia: { name: 'Ecografía', categoryKey: 'diagnostico_imagen' },
 
-      consulta_conducta: { name: 'Consulta Conducta', categoryKey: 'comportamiento_animal' },
-      entrenamiento_conducta: { name: 'Entrenamiento', categoryKey: 'comportamiento_animal' },
-      evaluacion_agresividad: { name: 'Evaluación Agresividad', categoryKey: 'comportamiento_animal' },
+  // Laboratorio Clínico
+  listado_examenes: { name: 'Listado de Exámenes', categoryKey: 'laboratorio_clinico' },
 
-      cardiologia: { name: 'Cardiología', categoryKey: 'especialidades_medicas' },
-      neurologia: { name: 'Neurología', categoryKey: 'especialidades_medicas' },
-      oncologia: { name: 'Oncología', categoryKey: 'especialidades_medicas' },
-      oftalmologia: { name: 'Oftalmología', categoryKey: 'especialidades_medicas' },
+  // Terapia Física y Rehabilitación
+  fisioterapia: { name: 'Terapia Física y Rehabilitación', categoryKey: 'rehabilitacion' },
 
-      corte_unas: { name: 'Corte Uñas', categoryKey: 'estetica' },
-      banos: { name: 'Baños', categoryKey: 'estetica' },
-      corte_pelo: { name: 'Corte Pelo', categoryKey: 'estetica' },
-      tratamiento_antipulgas: { name: 'Antipulgas', categoryKey: 'estetica' },
+  // Hotel y Guardería
+  hotel_guarderia: { name: 'Hotel y Guardería', categoryKey: 'hotel_guarderia' },
 
-      chequeos_anuales: { name: 'Chequeos Anuales', categoryKey: 'prevencion_salud' },
-      planes_vacunacion: { name: 'Planes Vacunación', categoryKey: 'prevencion_salud' },
-      programas_bienestar: { name: 'Programas Bienestar', categoryKey: 'prevencion_salud' },
+  // Peluquería y Estética
+  peluqueria_spa: { name: 'Peluquería y Spa', categoryKey: 'estetica' },
 
-      guarderia_diurna: { name: 'Guardería', categoryKey: 'hospedaje_guarderia' },
-      hospedaje_perros: { name: 'Hospedaje', categoryKey: 'hospedaje_guarderia' },
-      paseo_perros: { name: 'Paseo Perros', categoryKey: 'hospedaje_guarderia' },
-
-      consulta_online: { name: 'Consulta Online', categoryKey: 'otros_servicios' },
-      microchip_registro: { name: 'Microchip', categoryKey: 'otros_servicios' },
-      venta_productos: { name: 'Venta Productos', categoryKey: 'otros_servicios' },
-      asesoria_adopcion: { name: 'Asesoría Adopción', categoryKey: 'otros_servicios' }
-    }
+  // Servicios y Asistencia en la Etapa Final de la Vida
+  eutanasia: { name: 'Eutanasia', categoryKey: 'asistencia_final_vida' },
+  servicios_cremacion: { name: 'Servicios de Cremación', categoryKey: 'asistencia_final_vida' }
+}
   };
 
   constructor() {}

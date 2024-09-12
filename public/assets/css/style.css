@@ -10897,7 +10897,8 @@ section {
       height: 45px;
       width: 45px;
       margin: 0 auto;
-      color: var(--primary);
+      /* color: var(--primary); */
+      color: #438e99;
       text-align: center;
       border-radius: 50%;
       z-index: 1;
@@ -10908,8 +10909,11 @@ section {
       transform: scale(1.1);
       position: relative; }
     .menubar-area .menubar-nav .nav-link.active {
-      color: var(--primary); }
+      color: var(--primary);
+    
+    }
       .menubar-area .menubar-nav .nav-link.active i {
+        background-color: #438e99;
         color: var(--theme-text-color); }
       .menubar-area .menubar-nav .nav-link.active:after {
         display: block; }
@@ -12241,8 +12245,12 @@ button {
   padding: 8px 12px; }
 
 .btn-primary {
-  background-color: var(--primary);
-  border-color: var(--primary); }
+  background-color: #438e99;
+  border-color: #438e99; }
+  /* background-color: var(--primary); */
+  /* border-color: var(--primary); } */
+
+
   .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
     border-color: var(--primary);
     background-color: var(--primary-hover);
@@ -15992,7 +16000,7 @@ label input {
   position: relative;
   height: 100%;
   border-radius: var(--border-radius);
-  border: 1px solid var(--primary);
+  border: 1px solid #438e99;
   overflow: hidden; }
   .dz-card .dz-media {
     border-radius: var(--border-radius) var(--border-radius) 0 0;
@@ -16462,7 +16470,7 @@ label input {
 .dz-category .category-tag {
   font-size: 12px;
   font-weight: 500;
-  border: 1px solid var(--dark);
+  border: 1px solid #438e99;
   border-radius: var(--border-radius);
   padding: 3px 12px;
   background-color: var(--bg-white); }
@@ -16518,16 +16526,21 @@ label input {
 .category-tag {
   font-size: 12px;
   font-weight: 400;
-  border: 1px solid var(--primary);
-  border-radius: var(--border-radius);
+  
+  
+  border: 1px solid #438e99;
+  /* border-radius: var(--border-radius);
+ */
+ border-radius: var(--border-radius);
   padding: 3px 12px;
   background-color: var(--bg-white); }
   .category-tag.tag-lg {
+    color: #438e99;
     padding: 8px 15px;
     font-size: 14px;
     font-weight: 500; }
   .category-tag.active {
-    background-color: var(--primary);
+    background-color: #32909b;
     color: var(--theme-text-color); }
 
 .dz-about .about-text {
